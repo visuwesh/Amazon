@@ -20,3 +20,8 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+ - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-java-app
+        path: target/my-java-app.jar
